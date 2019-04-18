@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "v-comment": "/components/comments/index",
+    "v-star": "/components/stars/index",
+    "login-model": "/components/loginModel/index"
+  }
+}

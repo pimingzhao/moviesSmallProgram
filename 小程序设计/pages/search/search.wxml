@@ -1,0 +1,19 @@
+<!--pages/search/search.wxml-->
+<form bindsubmit="formSubmit">
+    <view class="ser-container">
+        <icon wx:if="{{isClear}}" bind:tap="clearClick" class="icon clear" type="clear" size="20" color="#e1e1e1"></icon>
+        <icon bind:tap="searchClick" class="icon search" type="search" size="20" color="#e1e1e1"></icon>
+
+        <input name="input" type="text" placeholder="请输入想要搜索的片名" value="{{value}}" confirm-type="search" bindconfirm="onConfirm"
+            bindinput="onInput" bindblur="onBlur" />
+        <button form-type="submit">搜索</button>
+    </view>
+</form>
+<view>
+  <v-search-history bind:title="OnSearchTitle" bind:cleared="isCleared" value="{{historyTitle}}"></v-search-history>
+</view>
+<view wx:if="{{isSearch}}">
+    <block wx:for="{{subjects}}" wx:key="index">
+        <v-search subjects="{{item}}"></v-search>
+    </block>
+</view>

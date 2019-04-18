@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        var name = "The Window";
+        var object = {
+            name: "My Object",
+            getNameFunc: function () {
+                var name = "My";
+                return function () {
+                    return this.name;
+                };
+            }
+        };
+        console.error(object.getNameFunc()());
+        console.log('1------------------------------')
+        function outerFun() {
+            var a = 0;
+            function innerFun() {
+                a++;
+                console.error('a', a);
+            }
+            return innerFun;  //注意这里
+        }
+        var obj = outerFun();
+        obj();  //结果为1
+        obj();  //结果为2
+        var obj2 = outerFun();
+        obj2();  //结果为1
+        obj2();  //结果为2
+        console.log('2------------------------------')
+        function outerFun1() {
+            var a = 0;
+            console.error(a);
+        }
+        var a = 4;
+        outerFun1();
+        console.error(a);
+        console.log('3------------------------------')
+        function outerFun2() {
+            //没有var 
+            a = 0;
+            console.error('a', a);
+        }
+        var a = 4;
+        outerFun2();
+        console.error('a', a);
+        console.log('4------------------------------')
+    </script>
+</body>
+
+</html>

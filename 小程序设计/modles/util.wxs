@@ -1,0 +1,21 @@
+function sliceName(name) {
+    if (name) {
+        if (name.length > 6) {
+            return name.slice(0, 6) + "..."
+        } else {
+            return name
+        }
+    }
+}
+function conCatArray(arr1,arr2) {
+    var newArr = arr1.concat(arr2);
+    if(newArr.length>5)
+        newArr = newArr.slice(0,6);
+    return newArr;
+}
+
+
+module.exports = {
+    sliceName: sliceName,
+    conCatArray: conCatArray
+}

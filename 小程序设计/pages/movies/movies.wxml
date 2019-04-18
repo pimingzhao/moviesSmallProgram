@@ -1,0 +1,11 @@
+<!--pages/movies/movies.wxml-->
+<swiper indicator-dots="true" autoplay="false" interval="3000" duration="1000" indicator-active-color="#6FBFEA" indicator-color="#E3E3E3">
+    <block wx:for="{{imgUrl}}" wx:key="index">
+        <swiper-item>
+            <image src='{{item.image}}' mode="aspectFill" class="slide-image" data-id="{{item.id}}" catchtap="onSlideClick"></image>
+        </swiper-item>
+    </block>
+</swiper>
+<v-movies-type title="正在热映" type="inTheaters" subjects="{{in_theaters.subjects}}"></v-movies-type>
+<v-movies-type title="top250" type="top250" subjects="{{top250.subjects}}"></v-movies-type>
+<v-movies-type title="即将上映" type="comingSoon" subjects="{{coming_soon.subjects}}"></v-movies-type>

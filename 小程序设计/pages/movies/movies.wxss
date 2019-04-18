@@ -1,0 +1,6 @@
+/* pages/movies/movies.wxss */
+.slide-image{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,42 @@
+.container {
+  width: 274rpx;
+  height: 160rpx;
+  display: flex;
+/* components/loading/index.wxss */
+  flex-direction: column;
+  margin: 360rpx auto 0rpx;
+  box-sizing: border-box;
+  box-shadow:0 0 8px 4px rgb(226, 226, 226);
+  border-radius: 10rpx;
+  text-align: center;
+  padding-top: 30rpx;
+}
+.spinner{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 15rpx 60rpx;
+}
+.spinner > view {
+  width: 26rpx;
+  height: 26rpx;
+  background-color: #6AB2D8;
+  border-radius: 100%;
+  animation: bouncedelay 2s infinite ease-in-out;
+  animation-fill-mode: both;
+}
+ 
+.spinner .bounce1 {
+  animation-delay: -0.30s;
+}
+ 
+.spinner .bounce2 {
+  animation-delay: -0.18s;
+}
+ 
+@keyframes bouncedelay {
+  0%, 80%, 100% {
+    transform: scale(0.0);
+  } 40% {
+    transform: scale(1.0);
+  }
+}

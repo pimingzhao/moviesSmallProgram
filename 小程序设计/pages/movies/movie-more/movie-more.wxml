@@ -1,0 +1,10 @@
+<!--pages/movies/movie-more/movie-more.wxml-->
+<v-loading wx:if="{{loading}}"></v-loading>
+<view wx:else class="more-container">
+    <block wx:for="{{subjects}}" wx:key="index">
+        <v-movies subjects="{{item}}"></v-movies>
+    </block>
+</view>
+<view wx:if="{{isLoading}}" class="loading">
+    <text>正在加载...</text>
+</view>

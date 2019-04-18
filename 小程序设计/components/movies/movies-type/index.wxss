@@ -1,0 +1,17 @@
+/* components/movies/movies-type/index.wxss */
+.scroll{ 
+    padding: 0rpx 10rpx;
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+    border-radius: 15rpx;
+    box-sizing: border-box;
+}
+v-movies{
+    display: inline-block;
+    border-radius: 15rpx;
+    padding: 10rpx 10rpx 0rpx;
+}
+v-movies:not(:first-child){
+    margin-left: 5rpx;
+}

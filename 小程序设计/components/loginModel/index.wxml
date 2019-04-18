@@ -1,0 +1,11 @@
+<!--components/loginModel/index.wxml-->
+<view class="bg-login" />    
+<view class="login">
+    <view class="loginSelect">
+        <text catchtap="onCancelEvent">取消</text>
+        <text catchtap="onDetermine">确定</text>
+    </view>
+    <hr class="loginHr" />
+    <text>尚未登陆,登陆后可获得该权限,</text>
+    <text>是否跳转至登陆页面</text>
+</view>

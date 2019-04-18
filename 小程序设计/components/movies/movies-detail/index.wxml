@@ -1,0 +1,65 @@
+<!--components/movies/movies-detail/index.wxml-->
+<wxs src="../../../modles/util.wxs" module="tools"></wxs>
+<view class="container">
+    <view class="bg">
+        <text class="movie-type" wx:if="{{subjects.type}}">{{subjects.type=='in_theaters'?'正在热映':subjects.type=='coming_soon'?'即将上映':'top250'}}</text>
+        <image class="movie-img" src="{{subjects.image}}"></image>
+        <image class="bg-img" mode='aspectFill' src="{{subjects.image}}"></image>
+        <view class="collection">
+            <title>{{subjects.title}}</title>
+            <view class="star">
+                <v-star stars="{{subjects.stars}}"></v-star><text>{{subjects.average}}</text>
+            </view>
+            <p wx:if="{{subjects.movies_type}}">{{subjects.movies_type}}</p>
+            <p>{{subjects.pubdate}}<text wx:if="{{subjects.pubdate}}">上映</text></p>
+            <p>{{collect_count}}<text>人收藏</text></p>
+            <button wx:if="{{collected}}" class="collect" catchtap="cancelEvent" data-id="{{subjects.id}}">移除收藏</button>
+            <button wx:else class="collect" catchtap="collectClick" data-id="{{subjects.id}}">加入收藏</button>
+        </view>
+    </view>
+    <view class="introdution">
+        <view>
+            <text>导演：</text>
+            <text class="common">{{subjects.director}}</text>
+        </view>
+        <view>
+            <text>演员：</text>
+            <block wx:for="{{subjects.actors}}" wx:key="index">
+                <text class="common">{{item.name}}</text>
+                <text class="common"  wx:if="{{index!=subjects.actors.length-1}}"> / </text>
+            </block>
+        </view>
+        <view wx:if="{{subjects.language}}">
+            <text>语言：</text>
+            <text class="common">{{subjects.language}}</text>
+        </view>
+    </view>
+    <view class="line"></view>
+    <view class="summary {{_num==1 ? 'expand':' '}}">
+        <view>影片简介：</view>
+        <text>{{subjects.summary}}</text>
+    </view>
+    <view bindtap="summaryClick" class="{{(_num==1 || _num==2) ? 'icons':'none'}}">
+        <em class="Icon {{_num==2 ? 'upIcon':' '}}"></em>
+        <em class="Icon {{_num==2 ? 'upIcon2':' '}}"></em>
+        <em class="Icon {{_num==1 ? 'downIcon':' '}}"></em>
+        <em class="Icon {{_num==1 ? 'downIcon2':' '}}"></em>
+    </view>
+    <view class="line"></view>
+    <view class="actors-list">
+        <title>演员列表：</title>
+        <scroll-view class="scroll" scroll-x="true" scroll-y="false">
+            <block wx:for="{{subjects.actors}}" wx:key="index">
+                <view class="actor" bindtap="actorClick" data-name="{{item.name}}">
+                    <image wx:if="{{item.avatar}}" src="{{item.avatar}}"></image>
+                    <text>{{tools.sliceName(item.name)}}</text>
+                </view>
+            </block>
+        </scroll-view>
+    </view>
+    <view class="line"></view>
+    <view class="comments">
+        <v-comment bind:logined="longinEvent" author="{{subjects.comments}}" movieid="{{subjects.id}}"></v-comment>
+    </view>
+    <login-model wx:if="{{isLogin}}" bind:onCancel="onCancel" />
+</view>

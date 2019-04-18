@@ -1,0 +1,3 @@
+<!--pages/movies/movie-detail/movie-detail.wxml-->
+<v-loading wx:if="{{isLoading}}"></v-loading>
+<v-detail wx:if="{{!isLoading}}" subjects="{{subjects}}"></v-detail>

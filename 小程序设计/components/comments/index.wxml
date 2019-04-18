@@ -1,0 +1,37 @@
+<!--components/comments/index.wxml-->
+<view wx:if="{{isShow}}" class="shelter">
+    <form bindsubmit="formSubmit">
+        <view class="com-container">
+            <view class="comment-btn">
+                <button bindtap="cancelClick">取消</button>
+                <button form-type="submit">完成</button>
+            </view>
+            <textarea name="input" type="text" placeholder="请输入评论内容" focus="{{onfocus}}" value="{{value}}" confirm-type="finish" bindconfirm="onConfirm" bindinput="onInput" />
+            <text>{{value.length?value.length:0}}/140</text>
+            <!-- <icon wx:if="{{isClear}}" catch:tap="clearClick" class="icon" type="clear" size="21" color="#a5a5a5"></icon> -->
+        </view>
+    </form>
+</view>
+<view class="comContainer">
+    <view class="content">评论区：</view>
+    <view class="writeContent" bindtap="commentClick">写评论</view>
+    <view wx:if="{{authors.length==0}}" class='commentTemp'>该影片暂无评论，快来添加第一条评论吧!</view>
+    <view  wx:else>
+        <blocke wx:for="{{authors}}" wx:key="index">
+            <view class="author">
+                <view class="author-left">
+                    <image wx:if="{{item.avatar}}" src="{{item.avatar}}"></image>
+                    <title wx:if="{{item.name}}">{{item.name}}</title>
+                </view>
+                <view wx:if="{{item.date}}">{{item.date}}</view>
+            </view>
+            <text>{{item.content}}</text>
+        </blocke>
+        <view style="margin: 30rpx 10rpx 40rpx" wx:if="{{needMore}}"><title catchtap='needMoreClick'>>更多评论</title></view>
+        <view style="margin: 30rpx 10rpx 40rpx" wx:if="{{!needMore && needMoreClicked}}">
+            <title catchtap='retractMoreClick'>>收起更多</title>
+            <view style="text-align: center;font-size: 26rpx;margin-top: 30rpx">------ 到底了，点击下方按钮添加新的评论吧 ------</view>
+        </view>
+    </view>
+    <view class="com-content" bindtap="commentClick">点击写入评论</view>
+</view>

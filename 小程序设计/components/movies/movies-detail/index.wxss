@@ -1,0 +1,170 @@
+/* components/movies/movies-detail/index.wxss */
+.bg{
+    position: relative;
+    width: 100%;
+    background: rgba(27, 27, 27, 0.5);
+    margin-bottom: 45rpx;
+}
+.bg:before{
+    display: table;
+    content: "";
+}
+.bg image{
+    width: 30rpx;
+    height: 30rpx;
+}
+.bg .movie-img{
+    width: 260rpx;
+    height: 330rpx;
+    position: absolute;
+    left: 50rpx;
+    bottom: -25rpx;
+    z-index: 20;
+    border-radius: 10rpx;
+    box-shadow: 0 0 9px 6px #aaa9a9;
+}
+.bg .bg-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;height: 100%;
+    opacity: 0.1;
+}
+.bg .movie-type{
+    position: absolute;
+    color: #474747;
+    background: #FAC845;
+    font-size: 20rpx;
+    top: 92rpx;
+    left: 360rpx;
+    padding: 5rpx 10rpx;
+    border-radius: 10rpx;
+}
+.collection{
+    color: #e6e4e4;
+    font-size: 33rpx;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    padding:18% 20rpx 30rpx 50%;
+}
+.collection title{
+    font-size: 43rpx;
+    color: #fafafa;
+}
+.collect{
+    display: block; 
+    margin-top: 15rpx;
+    margin-left: 0rpx;
+    border-radius: 10rpx;
+    height: 65rpx;
+    line-height: 65rpx;
+    text-align: center;
+    background: #474747;
+    color: #ff2d51;
+    font-size: 33rpx;
+}
+.common{
+    font-size:34rpx;
+    color: #636363;
+}
+.star{
+    display: flex;
+    align-items: center;
+    margin-top: 10rpx;
+}
+.star text{
+    margin-left: 8rpx;
+}
+.introdution{
+    padding: 10rpx 15rpx;
+}
+.line{
+    width: 100%;
+    height: 20rpx;
+    background: #ececec;
+}
+.actors-list{
+    padding: 12rpx 15rpx;
+    border-top: 1rpx solid #d4d4d4;
+    border-bottom: 1rpx solid #d4d4d4;
+}
+.summary{
+    padding: 12rpx 15rpx;
+    border-top: 1rpx solid #d4d4d4;
+}
+.scroll{ 
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+    border-radius: 15rpx;
+    box-sizing: border-box;
+}
+.scroll .actor{
+    display: inline-block;
+    width: 220rpx;
+    text-align: center;
+    padding: 10rpx;
+}
+.scroll .actor:not(:last-child){
+    padding-right: 15rpx;
+}
+.actor text{
+    display: block;
+    font-size: 32rpx;
+    color: #808080;
+}
+.scroll image{
+    width: 220rpx;
+    height: 280rpx;
+    border-radius: 12rpx;
+}
+.summary text{
+    margin-top: 15rpx;
+    font-size: 32rpx;
+    color: #808080;
+    text-indent: 66rpx;
+    display: block;
+}
+.expand{
+    height: 263rpx;
+    margin-bottom: 22rpx;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.icons{
+    width: 150rpx;
+    height: 30rpx;
+    margin: 0rpx auto;
+    line-height: 30rpx;
+    position: relative;
+}
+.Icon{
+    content: "";
+    display: block;
+    width: 0rpx;
+    height: 0rpx;
+    border: 30rpx solid transparent;
+    position: absolute;
+    left: 50%;
+    transform: rotateX(-50%);
+}
+.upIcon{
+    top: -37rpx;
+    border-bottom: 30rpx solid #c9c9c9;
+}
+.upIcon2{
+    top: -26rpx;
+    border-bottom: 25rpx solid #ffffff;
+}
+.downIcon{
+    bottom: -23rpx;
+    border-top: 30rpx solid #c9c9c9;
+}
+.downIcon2{
+    bottom: -14rpx;
+    border-top: 25rpx solid #ffffff;
+}
+.none{
+    display: none;
+}

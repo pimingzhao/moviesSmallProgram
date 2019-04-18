@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "v-search": "/components/search/index",
+        "v-search-history": "/components/search/searchHistory/index"
+    }
+}

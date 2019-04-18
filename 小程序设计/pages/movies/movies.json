@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "v-movies-type": "/components/movies/movies-type/index"
+  }
+}

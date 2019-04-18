@@ -1,0 +1,27 @@
+<!--components/movies/index.wxml-->
+<wxs src="../../modles/util.wxs" module="tools"></wxs>
+<view class="deNav">
+    <view wx:if="{{longTap}}" class="container" catchtap="commonClick" catchlongpress="longClick">
+        <image src="{{subjects.image}}"></image>
+        <title>{{subjects.year}}</title>
+        <text>{{tools.sliceName(subjects.title)}}</text>
+        <view class="star">
+            <v-star stars="{{subjects.star}}"></v-star>
+            <text>{{subjects.average}}</text>
+        </view>
+    </view>
+    <veiw wx:if="{{cancelCet}}" class="deleteCollect">
+        <button data-id="{{subjects.id}}" catchtap="deleteClick">移除收藏</button>
+        <button catchtap="cancelClick">取消操作</button>
+    </veiw>
+</view>
+
+<view wx:if="{{!longTap}}" class="container" bind:tap="detailClick">
+    <image src="{{subjects.image}}"></image>
+    <title>{{subjects.year}}</title>
+    <text>{{tools.sliceName(subjects.title)}}</text>
+    <view class="star">
+        <v-star stars="{{subjects.star}}"></v-star>
+        <text>{{subjects.average}}</text>
+    </view>
+</view>

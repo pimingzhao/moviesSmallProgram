@@ -1,0 +1,59 @@
+<!--pages/mine/mine.wxml-->
+<view class='bg'>
+  <image class='backgroundImg' mode='aspectFill' src='{{bgImg}}'></image>
+  <image class='avater' src='{{userInfo.avatarUrl || avater}}'></image>
+</view>
+<view class='mineName'>
+  <button class="getInfo" wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+    登录 </button>
+  <text wx:else>{{userInfo.nickName}}</text>
+</view>
+<view class="collects" wx:if="{{subjects.length==0}}" class="emptyCollect">暂未收藏任何电影，快去收藏一些电影吧</view>
+<view wx:if="{{subjects.length!=0}}">
+  <view class="line"></view>
+  <view>
+    收藏区
+  </view>
+  <scroll-view scroll-y style="height:{{subjects.length>6?'845rpx':''}};padding-top: 20rpx">
+    <view class="collects">
+      <block wx:for="{{subjects}}" wx:key="index">
+        <v-movies bind:updates="updatePage" longTap="true" subjects="{{item}}"></v-movies>
+      </block>
+    </view>
+  </scroll-view>
+</view>
+<view class="line"></view>
+<view>
+  任务区
+</view>
+<view class="toDoContainer">
+  <view class="doWhat">今天做点什么？</view>
+  <view wx:if="{{listValue}}" class='toDoList'>
+    <checkbox-group bindchange="checkboxChange">
+      <checkbox value="{{listValue}}" checked='{{toDoChecked}}' color='#959595' />
+    </checkbox-group>
+    <text style="text-decoration:{{addNewTask?'line-through':''}}" class="toDoText">{{listValue}}</text>
+    <image wx:if="{{addNewTask}}" src="/images/my/add.png" catchtap='addNewTask'></image>
+    <icon wx:else catchtap='toDoCancel' type='cancel' color='#CBCBCB' />
+  </view>
+  <input wx:else class='toDoInput' value="{{listValue}}" type="text" confirm-type="done" bindblur="onBlur"
+    focus="{{toDoFocus}}" bindconfirm="onConfirm" />
+  <view>
+    <view class="finished">
+      <text catchtap='hasDoneEvent'>今日已做(点击查看)</text>
+      <text wx:if="{{hasDone && hasDoneTask.length!=0}}" catchtap='clearFinished'>清空</text>
+    </view>
+    <ul wx:if="{{hasDone}}" class="tdtNav">
+      <view wx:if="{{hasDoneTask.length==0}}" class="emptyCollect">尚未有已完成任务</view>
+      <block wx:for="{{hasDoneTask}}" wx:key="index">
+        <li class="tdt">
+          <text>{{item.value}}</text>
+          <text>{{item.time}}</text>
+        </li>
+      </block>
+      <view style="text-align:right">
+          共完成任务{{hasDoneTask.length}}个
+      </view>
+    </ul>
+  </view>
+</view>

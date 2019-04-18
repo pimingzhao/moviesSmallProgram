@@ -1,0 +1,37 @@
+/* pages/search/search.wxss */
+.ser-container{
+    width: 95%;
+    margin: 20rpx auto 0rpx;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.ser-container .icon{
+    position: absolute;
+    top: 14rpx;
+}
+.ser-container .search{
+    left: 71%;
+}
+.ser-container .clear{
+    left: 63%;
+}
+.ser-container input{
+    width: 79%;
+    border: 1rpx solid #f1f1f1;
+    height: 70rpx;
+    border-radius: 10rpx;
+    font-size: 32rpx;
+    padding-left: 20rpx;
+    padding-right: 132rpx;
+    box-sizing: border-box;
+}
+.ser-container button{
+    width: 120rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+    font-size: 32rpx;
+    margin: 0;
+    padding: 0;
+}

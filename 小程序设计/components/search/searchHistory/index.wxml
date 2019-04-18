@@ -1,0 +1,28 @@
+<!--components/search/searchHistory/index.wxml-->
+<wxs src='../../../modles/util.wxs' module="tools"></wxs>
+<view class='popular-nav'>
+  <view class="nav-header">
+    <text>大家都在搜</text>
+    <view catchtap='onRefresh'>
+      <image src='{{refreshImg}}' />换一批
+    </view>
+  </view>
+  <view class="search-title">
+    <block wx:for="{{popular}}" wx:key="index">
+      <text catchtap="searchTitleClick" style='background: {{item.background}}'>{{item.title}}</text>
+    </block>
+  </view>
+</view>
+<view class='history-nav'>
+  <view class='nav-header'>
+    <text>搜索历史</text>
+    <view catchtap='onClearAll'>
+      <image src='{{clearImg}}' />清空
+    </view>
+  </view>
+  <view class="search-title">
+    <block wx:for="{{tools.conCatArray(value,history)}}" wx:key="index">
+      <text catchtap="searchTitleClick">{{item.title}}</text>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,79 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.4.0",
+	"appid": "wx9e60db5e0751205d",
+	"projectname": "%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1-%E7%94%B5%E5%BD%B1",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 5,
+			"list": [
+				{
+					"id": -1,
+					"name": "页面详情",
+					"pathName": "pages/movies/movie-detail/movie-detail",
+					"query": "id=27110296"
+				},
+				{
+					"id": -1,
+					"name": "电影类别",
+					"pathName": "pages/movies/movies",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "搜索页面",
+					"pathName": "pages/search/search",
+					"query": ""
+				},
+				{
+					"id": 3,
+					"name": "更多电影",
+					"pathName": "pages/movies/movie-more/movie-more",
+					"query": "type=top250&navTitle=\"top250\""
+				},
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pages/mine/mine",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "ss",
+					"pathName": "pages/addMovies/addMovies"
+				}
+			]
+		}
+	}
+}

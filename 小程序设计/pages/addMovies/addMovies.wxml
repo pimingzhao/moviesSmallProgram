@@ -1,0 +1,30 @@
+<!--pages/addMovies/addMovies.wxml-->
+<view>
+    <ul class="form">
+        <li>影片名称:</li>
+        <input value='{{value}}' type="text" bindinput='titleValue' />
+        <li>影片评分（来源于豆瓣评分）：</li>
+        <input value='{{value}}' type="number" bindinput='averageValue' />
+        <li>影片宣传图片（目前只支持url形式）：</li>
+        <input value='{{value}}' type="text" bindinput='imageValue' />
+        <li>影片上映日期：</li>
+        <input value='{{value}}' type="text" bindinput='pubdateValue' />
+        <li>影片拍摄年份：</li>
+        <input value='{{value}}' type="text" bindinput='yearValue' />
+        <li>影片导演：</li>
+        <input value='{{value}}' type="text" bindinput='directorValue' />
+        <li>演员：</li>
+        <input value='{{value}}' type="text" bindinput='actorsValue' />
+        <li>影片简介：</li>
+        <input value='{{value}}' type="text" bindinput='summaryValue' />
+        <li>影片类型:</li>
+        <radio-group class="radio-group" bindchange="radioChange" size='20'>
+            <radio value="in_theaters" />in_theaters
+            <radio value="coming_soon" />coming_soon
+            <radio value="top250" />top250
+        </radio-group>
+    </ul>
+    <view class="btns">
+        <button bindtap="addMovies">添加</button>
+    </view>
+</view>

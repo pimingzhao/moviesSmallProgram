@@ -1,0 +1,5 @@
+/* components/stars/index.wxss */
+.images>image{
+    width: 22rpx;
+    height: 22rpx;
+}

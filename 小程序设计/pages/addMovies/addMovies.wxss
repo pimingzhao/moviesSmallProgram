@@ -1,0 +1,21 @@
+/* pages/addMovies/addMovies.wxss */
+.form{
+    font-size: 30rpx;
+    line-height: 45rpx;
+    display: flex;
+    flex-direction: column;
+    padding: 10rpx;
+}
+.form input{
+    width: 85%;
+    height: 40rpx;
+    border: 1rpx solid #bebebe;
+    margin: 10rpx auto;
+    padding: 0rpx 10rpx;
+}
+.btns>button{
+    width: 180rpx;
+    background: #6AB2D8;
+    color: #fff;
+    font-size: 33rpx;
+}

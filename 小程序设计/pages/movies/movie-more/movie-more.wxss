@@ -1,0 +1,26 @@
+/* pages/movies/movie-more/movie-more.wxss */
+.more-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10rpx 0rpx;
+}
+v-movies{
+    padding: 15rpx 10rpx 10rpx;
+}
+.loading{
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background: #e9e9e9;
+    border-top: 1rpx solid #cecece;
+    color: #686868;
+    box-sizing: border-box;
+    font-size: 32rpx;
+    text-align: center;
+    z-index: 100;
+}

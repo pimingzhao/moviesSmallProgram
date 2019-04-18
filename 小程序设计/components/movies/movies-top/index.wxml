@@ -1,0 +1,5 @@
+<!--components/movies/movies-top/index.wxml-->
+<view class="nav">
+    <title>{{title}}</title>
+    <text bind:tap="moreClick">更多 ></text>
+</view>

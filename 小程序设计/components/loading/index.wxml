@@ -1,0 +1,9 @@
+<!--components/loading/index.wxml-->
+<view class="container">
+  <view class="spinner">
+    <view class="bounce1"></view>
+    <view class="bounce2"></view>
+    <view class="bounce3"></view>
+  </view>
+  <title>加载中</title>
+</view>

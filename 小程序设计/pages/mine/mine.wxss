@@ -1,0 +1,99 @@
+/* pages/mine/mine.wxss */
+.bg{
+  width: 100%;
+  height: 300rpx;
+  position: relative;
+}
+.bg>.backgroundImg{
+  width: 100%;
+  height: 100%;
+}
+.bg>.avater{
+  position: absolute;
+  border-radius: 50%;
+  width: 90rpx;
+  height: 90rpx;
+  bottom: -38rpx;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.mineName{
+  margin-top: 40rpx;
+  text-align: center;
+  font-size: 33rpx;
+}
+v-movies{
+  padding-bottom: 15rpx;
+}
+.getInfo{
+  font-size: 26rpx;
+  border: 0prx solid #ffffff;
+  width: 260rpx;
+  margin-top: 4rpx;
+  background: #ffffff;
+}
+.toDoContainer{
+  padding: 25rpx;
+  font-size: 33rpx;
+}
+.collects{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 15rpx;
+  font-size: 33rpx;
+}
+.emptyCollect{
+  border-radius: 15rpx;
+  background-color: #ececec;
+  margin: 20rpx 35rpx;
+  padding: 20rpx 0rpx;
+  font-size: 32rpx;
+  text-align: center;
+}
+.doWhat{
+  margin-bottom: 10rpx;
+}
+.toDoInput{
+  width: 88%;
+  border-bottom: 1rpx solid rgb(207, 207, 207);
+  margin: 0px auto;
+  text-align: center;
+}
+.toDoList{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 33rpx;
+}
+.toDoList>image{
+  width: 43rpx;
+  height: 43rpx;
+}
+.toDoText{
+  margin: 0rpx 10rpx 0rpx 4rpx;
+}
+.finished{
+  margin: 20rpx 0rpx 10rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.tdt{
+  display: flex;
+  justify-content: space-between;
+  padding: 15rpx 20rpx 10rpx;
+  margin: 0rpx 15rpx;
+  background: #ececec;
+}
+.tdt:first-child{
+  border-radius: 10rpx 10rpx 0rpx 0rpx;
+}
+.line{
+  width: 100%;
+  height: 20rpx;
+  background: #f0f0f0;
+  border-top: 1rpx solid #dadada;
+  margin: 15rpx 0rpx 10rpx;
+}

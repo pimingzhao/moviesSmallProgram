@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arr = [
+            {
+                id: 1,
+                name: 'xiaopi',
+                items: [{
+                    id: '1-1',
+                    name: '1-1-1',
+                    items: [{
+                        id: '1-1-1-1',
+                        name: '1-1-1-1-1-1'
+                    }]
+                }]
+            }, {
+                id: 2,
+                name: 'pi',
+                items: [{
+                    id: '2-1',
+                    name: '2-1-1'
+                }, {
+                    id: '2-2',
+                    name: '2-2-1'
+                }]
+            }
+        ]
+        const handelArr = (arr) => {
+            var newArr = [];
+            arr.map(e => {
+                var temp = handelObj(e);
+                newArr.push(temp);
+            })
+            return newArr;
+        }
+        const handelObj = (obj) => {
+            if (obj.items && obj.items.length > 0) {
+                var children = handelArr(obj.items)
+                return {
+                    id: obj.id,
+                    label: obj.name,
+                    children
+                }
+            } return {
+                id: obj.id,
+                label: obj.name
+            }
+        }
+        var json = handelArr(arr);
+        console.log('json', json)
+    </script>
+</body>
+
+</html>

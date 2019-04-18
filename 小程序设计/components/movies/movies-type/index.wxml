@@ -1,0 +1,9 @@
+<!--components/movies/movies-type/index.wxml-->
+<view>
+    <v-movies-top title="{{title}}" type="{{type}}"></v-movies-top>
+    <scroll-view class="scroll" scroll-x="true" scroll-y="false">
+        <block wx:for="{{subjects}}" wx:key="{{subjects.id}}">
+            <v-movies subjects="{{item}}"></v-movies>
+        </block>
+    </scroll-view>
+</view>

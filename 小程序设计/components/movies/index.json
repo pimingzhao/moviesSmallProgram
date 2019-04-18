@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "v-star": "/components/stars/index"
+  }
+}

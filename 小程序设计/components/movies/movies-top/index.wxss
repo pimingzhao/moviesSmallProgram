@@ -1,0 +1,17 @@
+/* components/movies/movies-top/index.wxss */
+.nav{
+    padding: 0rpx 20rpx;
+    line-height: 80rpx;
+    height: 80rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #fff;
+    /* background: rgb(19, 192, 140); */
+    background: #71BFF2;
+    border-radius: 15rpx;
+    margin: 10rpx 0rpx;
+    width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -1,0 +1,21 @@
+<!--components/search/index.wxml-->
+<view class="search-container" bind:tap="searchClick">
+    <view class="movie-img">
+        <image src="{{subjects.image}}"></image>
+    </view>
+    <view class="search-content">
+        <view class="name">
+            <view class="margin-bottom">{{subjects.title}}</view>
+            <view class="average margin-bottom">
+                <v-stars stars="{{subjects.stars}}"></v-stars>
+                <text>评分：{{subjects.average}}</text>
+            </view>
+        </view>
+        <view class="margin-bottom">
+            <text>导演：{{subjects.directors}}</text>
+        </view>
+        <view class="margin-bottom">
+            <text>演员：{{subjects.actors}}</text>
+        </view>
+    </view>
+</view>
